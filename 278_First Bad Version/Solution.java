@@ -7,7 +7,15 @@ public class Solution extends VersionControl {
     }
 
     public int findIn(int first, int end) {
-        int centerPos = (first + end) / 2;
+        if(first == end) {
+            return first;
+        }
+        if(first <= 0 || end <= 0){
+            throw new RuntimeException();
+        }
+
+        // 此处越界
+        int centerPos = first - (first - end) / 2;
 
         System.out.println("find : " + first + "-->" + end);
         if (isBadVersion(centerPos)) {
@@ -27,7 +35,7 @@ public class Solution extends VersionControl {
 
 class VersionControl {
     boolean isBadVersion(int version) {
-        int firstBadVersion = 10;
+        int firstBadVersion = 1702766719;
         return version >= firstBadVersion;
     }
 }
