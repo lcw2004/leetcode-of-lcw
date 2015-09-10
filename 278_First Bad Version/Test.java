@@ -1,22 +1,39 @@
+import org.junit.Assert;
+
 /**
- * Created by Administrator on 2015/9/10.
+ * Created by Lcw on 2015/9/10.
  */
 public class Test {
 
-    public static void main(String[] args) {
-//        findIn(10);
-//        findIn(200);
-//        findIn(180);
-//        findIn(22);
-//        findIn(11);
-        findIn(1111111111);
-        findIn(2126753390);
+    @org.junit.Test
+    public void testSolution() {
+        find_Solution(1111111111);
+        find_Solution(2126753390);
     }
 
-    public static void findIn(int n) {
+    @org.junit.Test
+    public void testSolution1() {
+        find_Solution1(1111111111);
+        find_Solution1(2126753390);
+    }
+
+    public static void find_Solution(int n) {
         Solution solution = new Solution();
-        System.out.println("-----------");
+        System.out.println("--------------------");
         int firstBadVersion = solution.firstBadVersion(n);
         System.out.println("Result:" + firstBadVersion);
+        System.out.println("--------------------");
+
+        Assert.assertTrue(firstBadVersion == VersionControl.FIRST_BAD_VERSION);
+    }
+
+    public static void find_Solution1(int n) {
+        Solution1 solution = new Solution1();
+        System.out.println("--------------------");
+        int firstBadVersion = solution.firstBadVersion(n);
+        System.out.println("Result:" + firstBadVersion);
+        System.out.println("--------------------");
+
+        Assert.assertTrue(firstBadVersion == VersionControl.FIRST_BAD_VERSION);
     }
 }
