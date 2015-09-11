@@ -7,6 +7,7 @@ public class Solution {
        *          1.    数组是无序的
        *          2.    数组有重复数字
        *                仅且仅 第一个大于第二个的情况下需要切换序号
+       *          3.    负数，0，正数
        *
        *    思路：
        *          1.    先排序
@@ -17,7 +18,6 @@ public class Solution {
        * @return
        */
       public int[] twoSum(int[] nums, int target) {
-
             int index1 = 0;
             int index2 = 0;
 
@@ -29,18 +29,13 @@ public class Solution {
                         int lastNum = nums[j];
 
                         if(firstNum + lastNum == target) {
-                              if(firstNum > lastNum) {
-                                    index1 = j;
-                                    index2 = i;
-                              } else {
-                                    index1 = i;
-                                    index2 = j;
-                              }
+                              index1 = i + 1;
+                              index2 = j + 1;
+                              break;
                         }
                   }
             }
 
-            int[] resutl  = {index1 + 1, index2 + 1};
-            return resutl;
+            return new int[]{index1, index2};
       }
 }

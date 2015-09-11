@@ -9,8 +9,8 @@ public class Test {
 
     @org.junit.Test
     public void testSolution() {
-        int[] nums = {3, 2, 4, 4, 2};
-        int target = 8;
+        int[] nums = {-1, -2, -3, -4, -5};
+        int target = -8;
 
         Solution solution = new Solution();
         int[] resultArray = solution.twoSum(nums, target);
