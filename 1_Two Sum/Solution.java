@@ -38,4 +38,5 @@ public class Solution {
 
             return new int[]{index1, index2};
       }
+
 }

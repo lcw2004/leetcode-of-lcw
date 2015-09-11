@@ -21,7 +21,13 @@ public class Test {
 
     @org.junit.Test
     public void testSolution1() {
+        int[] nums = {-1, -2, -3, -4, -5};
+        int target = -8;
 
+        Solution2 solution = new Solution2();
+        int[] resultArray = solution.twoSum(nums, target);
+
+        System.out.println(Arrays.toString(resultArray));
     }
 
 
