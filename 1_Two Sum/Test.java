@@ -30,5 +30,14 @@ public class Test {
         System.out.println(Arrays.toString(resultArray));
     }
 
+    @org.junit.Test
+    public void testBestSolution() {
+        int[] nums = {-1, -2, -3, -4, -5};
+        int target = -8;
 
+        BestSolution solution = new BestSolution();
+        int[] resultArray = solution.twoSum(nums, target);
+
+        System.out.println(Arrays.toString(resultArray));
+    }
 }
